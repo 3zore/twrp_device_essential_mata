@@ -1,0 +1,12 @@
+# mount point       fstype    device                                                                flags
+/system             ext4      /dev/block/platform/soc/1da4000.ufshc/by-name/system                  flags=display="System";backup=1;
+/system_image       emmc      /dev/block/platform/soc/1da4000.ufshc/by-name/system                  flags=display="System image";backup=1;flashimg=1;
+/data               ext4      /dev/block/platform/soc/1da4000.ufshc/by-name/userdata                flags=display="Data";
+/misc               emmc      /dev/block/platform/soc/1da4000.ufshc/by-name/misc                    flags=display="Misc";backup=1;flashimg=1;
+/firmware           vfat      /dev/block/platform/soc/1da4000.ufshc/by-name/modem                   flags=display="Firmware";
+/dsp                ext4      /dev/block/platform/soc/1da4000.ufshc/by-name/dsp                     flags=display="Dsp";
+/xhci-hcd.0.auto*   auto      auto                                                                  flags=display="Xhci-hcd.0.auto*";logical;
+/0000:01:00.0*      auto      auto                                                                  flags=display="0000:01:00.0*";logical;
+/persist            ext4      /dev/block/platform/soc/1da4000.ufshc/by-name/persist                 flags=display="Persist";
+/persist_image      emmc      /dev/block/platform/soc/1da4000.ufshc/by-name/persist                 flags=display="Persist image";backup=1;flashimg=1;
+none                swap      /dev/block/zram0                                                      flags=display="None";
