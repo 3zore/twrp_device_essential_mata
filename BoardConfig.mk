@@ -55,7 +55,8 @@ TW_INCLUDE_REPACKTOOLS := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := quiet androidboot.hardware=mata user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 loop.max_part=7 buildvariant=user veritykeyid=id:84678c054b9c09576bf1ecb156ea6e5e65f52593
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x01000000
@@ -66,8 +67,9 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/essential/mata
-TARGET_KERNEL_CONFIG := mata_defconfig
+TARGET_KERNEL_SOURCE := kernel/essential/msm8998
+TARGET_KERNEL_CONFIG := lineageos_mata_defconfig
+TARGET_KERNEL_CLANG_COMPILE := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
