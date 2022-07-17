@@ -75,7 +75,7 @@ TARGET_KERNEL_CONFIG := mata_defconfig
 TARGET_BOARD_PLATFORM := msm8998
 
 # Recovery
-TARGET_RECOVERY_DEVICE_MODULES := android.hidl.allocator@1.0.recovery libhidlmemory.recovery
+# TARGET_RECOVERY_DEVICE_MODULES := android.hidl.allocator@1.0.recovery libhidlmemory.recovery
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
