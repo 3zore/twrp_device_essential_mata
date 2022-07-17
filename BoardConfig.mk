@@ -52,6 +52,9 @@ AB_OTA_PARTITIONS += \
 
 TW_INCLUDE_REPACKTOOLS := true
 
+# GPT Utils
+BOARD_PROVIDES_GPTUTILS := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=mata user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 loop.max_part=7 buildvariant=userdebug veritykeyid=id:7e4333f9bba00adfe0ede979e28ed1920492b40f
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
