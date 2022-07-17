@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_mata.mk
+    $(LOCAL_DIR)/twrp_mata.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_mata-user \
-    omni_mata-userdebug \
-    omni_mata-eng
+    twrp_mata-user \
+    twrp_mata-userdebug \
+    twrp_mata-eng
