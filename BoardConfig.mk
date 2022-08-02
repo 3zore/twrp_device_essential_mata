@@ -76,6 +76,7 @@ TARGET_BOARD_PLATFORM := msm8998
 
 # Recovery
 # TARGET_RECOVERY_DEVICE_MODULES := android.hidl.allocator@1.0.recovery libhidlmemory.recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
