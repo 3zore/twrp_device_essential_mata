@@ -89,6 +89,11 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
 
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
+# Root
+BOARD_ROOT_EXTRA_SYMLINKS := /mnt/vendor/persist:/persist
+BOARD_ROOT_EXTRA_SYMLINKS += /vendor/lib/dsp:/dsp
+BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
+
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
