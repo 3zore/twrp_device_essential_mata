@@ -75,7 +75,18 @@ TARGET_KERNEL_CONFIG := mata_defconfig
 TARGET_BOARD_PLATFORM := msm8998
 
 # Recovery
-# TARGET_RECOVERY_DEVICE_MODULES := android.hidl.allocator@1.0.recovery libhidlmemory.recovery
+TARGET_RECOVERY_DEVICE_MODULES := \
+    android.hidl.allocator@1.0 \
+    android.hidl.memory@1.0.so \
+    android.hidl.memory.token@1.0.so \
+    libhidlmemory
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.allocator@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.memory@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.memory.token@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libhidlmemory.so
+
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
 # Hack: prevent anti rollback
