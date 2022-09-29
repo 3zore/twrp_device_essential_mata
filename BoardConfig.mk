@@ -71,6 +71,9 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/essential/mata
 TARGET_KERNEL_CONFIG := mata_defconfig
 
+# Overscan
+TARGET_RECOVERY_OVERSCAN_PERCENT := 5
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
 
