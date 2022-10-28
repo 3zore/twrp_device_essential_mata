@@ -20,8 +20,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.msm8998 \
-    bootctrl.msm8998.recovery
+    bootctrl.msm8998
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
