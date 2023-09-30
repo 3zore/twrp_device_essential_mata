@@ -72,10 +72,10 @@ jobs:
       uses: actions/setup-python@v4
       with:
       python-version: ${{ matrix.python-version }}
-    #- name: Install dependencies
-    #  run: |
-    #    python -m pip install --upgrade pip
-    #    pip install ruff pytest
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install ruff pytest
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
     # - name: Cleanup
     #  uses: rokibhasansagar/slimhub_actions@main
