@@ -41,7 +41,6 @@ on:
         description: 'BUILD_TARGET'
         required: true
         default: 'boot'
-
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
